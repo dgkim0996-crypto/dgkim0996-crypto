@@ -38,7 +38,7 @@
 ## 📊 활동
 
 <p>
-  <img src="https://github-readme-stats.vercel.app/api?username=dgkim0996-crypto&show_icons=true&include_all_commits=true&hide=stars&hide_border=true&bg_color=00000000&title_color=1d5fae&icon_color=1d5fae&text_color=7d8590&disable_animations=true" height="150" alt="GitHub 활동 통계">
+  <img src="https://ghchart.rshah.org/1d5fae/dgkim0996-crypto" width="100%" alt="최근 1년 GitHub 기여 그래프">
 </p>
 
 ## 🌱 지금 하는 것
