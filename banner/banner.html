@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>banner</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  /* 배치는 정건희 프로필 배너(github.com/donasman)를 그대로 따르고, 내용과 색만 바꿨다.
+     GitHub 라이트·다크 배경 위에 투명하게 올라가도록 글자·선 색만 테마별로 둔다 */
+  :root {
+    --ink: #1f2328;
+    --muted: #59636e;
+    --rule: #d1d9e0;
+    --accent: #1d5fae;
+    --line: rgba(29, 95, 174, .42);
+  }
+  :root[data-theme="dark"] {
+    --ink: #e6edf3;
+    --muted: #9198a1;
+    --rule: #3d444d;
+    --accent: #6ea8ee;
+    --line: rgba(110, 168, 238, .40);
+  }
+  html, body { margin: 0; background: transparent; }
+  body {
+    font-family: "Wanted Sans Variable", "Wanted Sans", system-ui, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .banner {
+    position: relative;
+    width: 880px;
+    box-sizing: border-box;
+    padding: 8px 2px 10px;
+    display: grid;
+    grid-template-columns: 318px 158px 1fr 252px;
+    column-gap: 0;
+    align-items: center;
+  }
+
+  .intro {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px 28px 6px 0;
+  }
+  .name { font-size: 17px; font-weight: 600; color: var(--muted); margin: 0 0 14px; letter-spacing: .01em; }
+  h1 {
+    margin: 0;
+    font-size: 29px;
+    line-height: 1.34;
+    font-weight: 720;
+    letter-spacing: -.025em;
+    word-break: keep-all;
+  }
+  .site { font-size: 14px; font-weight: 600; color: var(--accent); }
+
+  .entity {
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--rule);
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 11px 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tbl { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; font-weight: 500; }
+  .ko { font-size: 11px; color: var(--muted); }
+
+  .skills .row {
+    font-size: 12.5px;
+    height: 21px;
+    line-height: 21px;
+    padding: 0 11px;
+    border-top: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  .head + .row { border-top: 0; }
+
+  .exps .row { padding: 9px 12px 9px; border-top: 1px solid var(--rule); }
+  .exps .t { display: block; font-size: 13.5px; font-weight: 650; }
+  .exps .sub { display: block; font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+  .join {
+    position: absolute;
+    top: 6px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    transform: translateX(-50%);
+  }
+
+  svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  svg.lines path { fill: none; stroke: var(--line); stroke-width: 1.15; }
+  svg.lines circle { fill: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <svg class="lines" aria-hidden="true"></svg>
+
+    <div class="intro">
+      <div>
+        <p class="name">김동건 · AI 서비스 개발자</p>
+        <h1>AI가 틀리는<br>날에도, 현장은<br>멈추지 않게<br>만듭니다</h1>
+      </div>
+      <div class="site">dgkim0996-crypto.github.io</div>
+    </div>
+
+    <div class="entity skills">
+      <div class="head"><span class="tbl">skills</span><span class="ko">기술</span></div>
+      <div class="row" data-rel="hansotbap opic">Python</div>
+      <div class="row" data-rel="hansotbap opic">FastAPI</div>
+      <div class="row" data-rel="hansotbap fantasteel">TypeScript</div>
+      <div class="row" data-rel="hansotbap fantasteel stock">React</div>
+      <div class="row" data-rel="hansotbap">three.js</div>
+      <div class="row" data-rel="fantasteel">NestJS, Prisma</div>
+      <div class="row" data-rel="stock">Express, WebSocket</div>
+      <div class="row" data-rel="fantasteel opic stock">PostgreSQL</div>
+      <div class="row" data-rel="hansotbap opic stock">LLM API</div>
+      <div class="row" data-rel="opic">scikit-learn</div>
+      <div class="row" data-rel="hansotbap opic">Whisper</div>
+      <div class="row" data-rel="bankmode">C#, .NET</div>
+      <div class="row" data-rel="bankmode">Chrome Extension</div>
+      <div class="row" data-rel="opic stock">Docker</div>
+      <div class="row" data-rel="opic bankmode">GitHub Actions</div>
+    </div>
+
+    <div class="gap"></div>
+    <div class="join">N : M</div>
+
+    <div class="entity exps">
+      <div class="head"><span class="tbl">experiences</span><span class="ko">경험</span></div>
+      <div class="row" data-id="hansotbap"><span class="t">한솥밥</span><span class="sub">해커톤 5인, 2026.11</span></div>
+      <div class="row" data-id="fantasteel"><span class="t">FantaSteel ERP</span><span class="sub">팀 5인·본선 2위, 2026.09 – 2026.10</span></div>
+      <div class="row" data-id="opic"><span class="t">OPIc AI 채점 시뮬레이터</span><span class="sub">개인 프로젝트, 2026.10 – 2026.11</span></div>
+      <div class="row" data-id="stock"><span class="t">포스코증권 모의투자</span><span class="sub">개인 프로젝트, 2026.09 – 2026.10</span></div>
+      <div class="row" data-id="bankmode"><span class="t">은행 모드 BankMode</span><span class="sub">개인 프로젝트, 2026.10</span></div>
+    </div>
+  </div>
+
+<script>
+  // 기술 행 오른쪽 끝에서 경험 행 왼쪽 끝까지 곡선을 잇는다
+  function draw() {
+    const banner = document.querySelector(".banner");
+    const svg = banner.querySelector("svg.lines");
+    const base = banner.getBoundingClientRect();
+    const NS = "http://www.w3.org/2000/svg";
+    svg.innerHTML = "";
+    const exps = {};
+    banner.querySelectorAll(".exps .row").forEach(r => {
+      const b = r.getBoundingClientRect();
+      exps[r.dataset.id] = { x: b.left - base.left, y: b.top - base.top + b.height / 2 };
+    });
+    const gap = banner.querySelector(".gap").getBoundingClientRect();
+    const join = banner.querySelector(".join");
+    join.style.left = (gap.left - base.left + gap.width / 2) + "px";
+
+    banner.querySelectorAll(".skills .row").forEach(r => {
+      const b = r.getBoundingClientRect();
+      const x1 = b.right - base.left, y1 = b.top - base.top + b.height / 2;
+      r.dataset.rel.split(" ").forEach(id => {
+        const { x: x2, y: y2 } = exps[id];
+        const dx = (x2 - x1) * 0.5;
+        const p = document.createElementNS(NS, "path");
+        p.setAttribute("d", `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`);
+        svg.appendChild(p);
+      });
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("cx", x1); c.setAttribute("cy", y1); c.setAttribute("r", 2);
+      svg.appendChild(c);
+    });
+    Object.values(exps).forEach(({ x, y }) => {
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", 2.6);
+      svg.appendChild(c);
+    });
+  }
+  document.fonts.ready.then(() => {
+    draw();
+    document.body.dataset.ready = "1";
+    // build_svg.py가 headless Chrome으로 열 때(#measure) 잰 값을 문서 끝에 적어 둔다
+    if (location.hash === "#measure" && window.MEASURE) {
+      const out = document.createElement("pre");
+      out.id = "measure";
+      out.textContent = JSON.stringify(window.MEASURE());
+      document.body.appendChild(out);
+    }
+  });
+</script>
+<script>
+  // 배너 안 글자·상자 위치 재기 (build_svg.py에서 사용)
+  window.MEASURE = () => {
+    const banner = document.querySelector('.banner');
+    const base = banner.getBoundingClientRect();
+    const rel = r => ({ x: r.left - base.left, y: r.top - base.top, w: r.width, h: r.height });
+    const texts = [];
+    const role = el => {
+      if (el.closest('.name')) return ['name', 'muted'];
+      if (el.closest('h1')) return ['h1', 'ink'];
+      if (el.closest('.site')) return ['site', 'accent'];
+      if (el.closest('.tbl')) return ['tbl', 'ink'];
+      if (el.closest('.ko')) return ['ko', 'muted'];
+      if (el.closest('.join')) return ['join', 'muted'];
+      if (el.closest('.skills .row')) return ['skill', 'ink'];
+      if (el.closest('.exps .t')) return ['xtitle', 'ink'];
+      if (el.closest('.exps .sub')) return ['xsub', 'muted'];
+      return ['other', 'ink'];
+    };
+    const walker = document.createTreeWalker(banner, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) if (walker.currentNode.textContent.trim()) nodes.push(walker.currentNode);
+    for (const n of nodes) {
+      const el = n.parentElement;
+      const range = document.createRange(); range.selectNodeContents(n);
+      const r = range.getBoundingClientRect();
+      const mark = document.createElement('span');
+      mark.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+      n.parentNode.insertBefore(mark, n);
+      const baseline = mark.getBoundingClientRect().bottom - base.top;
+      mark.remove();
+      const cs = getComputedStyle(el);
+      const [kind, color] = role(el);
+      const row = el.closest('.row');
+      texts.push({
+        text: n.textContent.trim(), x: r.left - base.left, y: baseline,
+        size: parseFloat(cs.fontSize), weight: cs.fontWeight,
+        mono: cs.fontFamily.includes('JetBrains'), ls: cs.letterSpacing === 'normal' ? 0 : parseFloat(cs.letterSpacing),
+        kind, color,
+        rel: row && row.dataset.rel ? row.dataset.rel : null,
+        id: row && row.dataset.id ? row.dataset.id : null,
+      });
+    }
+    const entities = [...banner.querySelectorAll('.entity')].map(e => {
+      const head = e.querySelector('.head');
+      return {
+        box: rel(e.getBoundingClientRect()),
+        headBottom: rel(head.getBoundingClientRect()).y + head.getBoundingClientRect().height,
+        rows: [...e.querySelectorAll('.row')].map(r => ({ ...rel(r.getBoundingClientRect()), rel: r.dataset.rel || null, id: r.dataset.id || null })),
+      };
+    });
+    const fontsOk = document.fonts.check('600 16px "Wanted Sans Variable"') && document.fonts.check('500 12px "JetBrains Mono"');
+    return { width: base.width, height: base.height, texts, entities, fontsOk };
+  };
+</script>
+</body>
+</html>
