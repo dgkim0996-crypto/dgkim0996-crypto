@@ -27,7 +27,7 @@
 
 | | 이름 | 구분 | 기간 | 코드 |
 |:-:|:--|:--|:--|:-:|
-| <img src="./assets/marks/hansotbap.svg" width="22" height="22" alt=""> | [한솥밥](https://dgkim0996-crypto.github.io/#hansotbap) | POSCO K-뉴딜 아카데미 해커톤 5인, 고로 3D·화면·AI와 규칙 비교 실험 | 2026.11 | [GitHub](https://github.com/posco-hackathon/hansotbap) |
+| <img src="./assets/marks/hansotbap.svg" width="22" height="22" alt=""> | [한솥밥](https://dgkim0996-crypto.github.io/#hansotbap) | POSCO K-뉴딜 아카데미 해커톤 5인·**대상(1위)**, 고로 3D·화면·AI와 규칙 비교 실험 | 2026.11 | [GitHub](https://github.com/posco-hackathon/hansotbap) |
 | <img src="./assets/marks/fantasteel.svg" width="22" height="22" alt=""> | [FantaSteel ERP](https://dgkim0996-crypto.github.io/#fantasteel) | 포스코 K-뉴딜 아카데미 팀 5인·본선 2위, 수주·재고 API·화면 도우미 | 2026.09 – 2026.10 | [GitHub](https://github.com/SteelFlowLLM/fantasteel-erp) |
 | <img src="./assets/marks/opic.svg" width="22" height="22" alt=""> | [OPIc AI 채점 시뮬레이터](https://dgkim0996-crypto.github.io/#opic) | 개인 프로젝트, 규칙 루브릭 + ML 채점·모델 관문 | 2026.10 – 2026.11 | 비공개 |
 | <img src="./assets/marks/stock.svg" width="22" height="22" alt=""> | [포스코증권 모의투자](https://dgkim0996-crypto.github.io/#stock) | 개인 프로젝트, 실시간 시세·멱등 주문 | 2026.09 – 2026.10 | [GitHub](https://github.com/dgkim0996-crypto/posco-stock) |
